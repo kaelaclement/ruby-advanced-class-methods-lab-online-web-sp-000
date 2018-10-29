@@ -1,3 +1,5 @@
+require 'pry'
+
 class Song
   attr_accessor :name, :artist_name
   @@all = []
@@ -46,6 +48,8 @@ class Song
   end
 
   def self.new_from_filename(file)
+    data = file.split(/( - )\w+ \w+ \w+ \w+(\.\w+)/)
+    binding.pry
   end
 
 end
