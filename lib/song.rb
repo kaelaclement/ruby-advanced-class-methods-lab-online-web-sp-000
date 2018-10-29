@@ -44,11 +44,11 @@ class Song
   end
 
   def self.alphabetical
-    self.all.sort {|song_1, song_2| song_1.name <=> song_2.name}
+    self.all.sort_by {|song| song.name}
   end
 
   def self.new_from_filename(file)
-    data = file.split(/( - )\w+ \w+ \w+ \w+(\.\w+)/)
+    data = file.split(/[-.]/)
     binding.pry
   end
 
