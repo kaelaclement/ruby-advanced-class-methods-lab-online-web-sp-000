@@ -52,6 +52,7 @@ class Song
     song = Song.new
     song.artist_name = data[0].strip
     song.name = data[1].strip
+    song
   end
 
 end
