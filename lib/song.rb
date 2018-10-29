@@ -49,7 +49,7 @@ class Song
 
   def self.new_from_filename(file)
     data = file.split(/[-.]/)
-    data.pop
+    song = Song.new
     song.artist_name = data[0]
     song.name = data[1]
     binding.pry
